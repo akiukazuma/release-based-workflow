@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>BootstrapとJqueryでボタンあれこれ</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        <script>
+            // Jqueryは必ず一番上に$(function() { });を書きます。{}の中に色々書いていきます
+            $(function() {
+                let text_val  = '';
+
+                // classを指定したい時 → .
+                // idを指定したい時 → #
+                // idは使いまわせず、classは同じ名前をいろんなhtml要素に使いまわせる
+                $('.alert').hide();
+
+                // 指定したclassやidをもつ要素を押したときに動く。ここではボタン1が押されたとき。
+                $(document).on('click', '.demo1', function() {
+                    // ここでテキストボックスの中の値を取得する
+                    let textBoxValue = $(".validation_text").val();
+                    // F12のデベロッパーツールのconsoleで取得した値を表示する。これでちゃんと値が取れているか確認できる。
+                    console.log(textBoxValue);
+                    // テキストボックスの中の値が空だったら文言を出す（正しくは「hyouji」のクラスの中に赤色の文章を出す）処理
+                    if (textBoxValue == '') {
+                        $(".hyouji").html('<p style="color: red">テキストボックスの中が空だよー</p>');
+                    } else {
+                        $(".hyouji").html('');
+                    }
+                    $('.alert').show();
+                    setTimeout(function() {     
+                        $('.alert').hide();     // 3秒後にアラートが閉じる。1000で1秒。
+                    }, 3000);
+                    
+                });
+
+                // ラジオボタンを押したときに動く
+                $(document).on('change', '.radio', function() {
+                    // this → ここでは、三つラジオボタンがある中で実際に押されたラジオボタンの要素（valueだったり、要素の場所だったり）を取得
+                    // なぜthisを使うのか → .radioの要素が三つあるけど押したボタンってどれか認識できない…それを解消するため。（class名など同じ名前、同じ要素が複数あってどれか一つだけいじりたい などの場面で使える。）
+                    let radioValue = $(this).val();
+                    console.log(radioValue);
+                    // ラジオボタンのチェックを一旦すべて消した後、thisを指定することで押したラジオボタンだけにチェックを入れる処理。これを入れないと一度押したラジオボタンが一生消えない。チェックボックスとは違うんだ
+                    $(".radio").prop("checked", false);
+                    $(this).prop("checked", true);
+
+                    // 押したラジオボタンのvalueが1だったら別タブを開いて別ページに移動するぞ
+                    if (radioValue == 1) {
+                        window.open('https://www.facebook.com/katsuhito.iwaoka/?locale=ja_JP', '_blank');
+                    }
+                });
+
+                // 指定した要素の中身を変えたときに動く
+                $(document).on('change', '.text', function() {
+                    text_val = $('.text').val();        // .text（今回はテキストボックス）の中身を取得
+                    $('.hello').text(text_val);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">ナビバー</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="bootstrap_sample.html">ホーム</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="bootstrap_sample2.html">ボタンのあれこれ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Pricing</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                ドロップダウン
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <h2>Jqueryで動的に動かす例</h2>
+            <form>
+                <div class="col-auto">
+                    <button type="button" class="btn btn-primary demo1">ボタン１</button>
+                    <!-- ↓はモーダルを表示するボタン。モーダルはJavascriptやJqueryを使わずBootstrapだけで動いている -->
+                    <button type="button" class="btn btn-info demo2" data-bs-toggle="modal" data-bs-target="#modal_2">ボタン２</button><br>
+                </div>
+                <!-- アラートを表示する -->
+                <div class="alert alert-info" role="alert">アラート！！</div>
+                <input type="text" class="form-control text">
+            </form>
+            <!-- テキストボックスに文字を入れたり消したりすると値が表示される部分 -->
+            <div class="hello"></div>
+            <!-- ボタン1を押したときにテキストボックスの中が空だったらclass名「hyouji」に文言を出す -->
+            <div class="validation" style="margin-top: 50px;">
+                <input type="text" class="form-control validation_text">
+                <p>↑に値が入ってないときにボタン1押したら下に文字出てくるよ</p>
+                <div class="hyouji"></div>
+            </div>
+
+            <!-- aタグではなくよくある遷移ボタンでもないのに別ページに飛ばしたりモーダル（浮き出てくるやつ）が開くところ -->
+            <div class="useRadio" style="margin-top: 50px;">
+                <p>↓からボタンを選んでね！</p>
+                <input type="radio" class="testRadio1 radio" name="test1" value="1">
+                <input type="radio" class="testRadio2 radio" name="test2" value="2">
+                <input type="radio" class="testRadio3 radio" name="test3" value="3" data-bs-toggle="modal" data-bs-target="#modal_1">
+            </div> 
+
+
+            <!-- モーダル -->
+            <!-- data-bs-backdrop=staticを設定すると画面の後ろを押しても閉じません。×か閉じるを押さないといけません。 -->
+            <div class="modal fade" id="modal_1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">このモーダルのタイトル</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            モーダルは色んなときに使える。警告文を出したり、この中に色んなものを追加したり…
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+                            <button type="button" class="btn btn-primary">閉じナイ！</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="modal_2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">このモーダルのタイトル</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h5>あなたは選ばれました！！！！！</h5>
+                            <p>残り時間はありません。<a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title" data-bs-content="Popover body content is set in this attribute.">咲-Saki-を見る</a>をクリックしてください</p>
+                            <hr>
+                            <h5>ウイルスにかかりました。</h5>
+                            <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> have tooltips on hover.</p>
+                          </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+                            <button type="button" class="btn btn-primary">了解</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

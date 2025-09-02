@@ -1,0 +1,43 @@
+.header {
+    /* 要素の配置設定 ブラウザ画面を基準位置にし、要素を固定する */
+    position: fixed;
+    /* 上端からの距離を指定 */
+    top: 0;
+    /* 横幅 */
+    width: 50%;
+    /* 立幅 */
+    height: 100px;
+    /* 背景色 */
+    background-color: #00ff4cbd;
+}
+
+.main {
+    /* 余白の指定 */
+    padding-top: 50px;
+    /* 要素のはみ出しの設定 */
+    overflow: auto;
+}
+
+.main p {
+    color: red;
+}
+
+.main h1 {
+    color: yellow;
+}
+
+span {
+    font-weight: bold;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: darkgray;
+}
+
+span {
+    color:tomato;
+}

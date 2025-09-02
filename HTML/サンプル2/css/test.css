@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    background: #faf5ed;
+    font-size: 16px;
+    font-family: 游明朝体, YuMincho, "游明朝 Medium", "Yu Mincho Medium", 游明朝, "Yu Mincho", serif;;
+}
+
+.header-title {
+    padding-left: 40px;
+    color: #fff;
+    background: #5a442a;
+}
+
+.header-title h1 {
+    margin: 0;
+    color: red;
+    font-size: 50px;
+}
+
+.subtitle {
+    font-size: 16px;
+}
+
+header img {
+    width: 100%;
+}
+
+.features {
+    margin: 20px 32px 0;
+}
+
+.features > h1 {
+    margin: 0;
+    color: #707070;
+}
+
+.info-text p {
+    speak: normal;
+}
+
+.main-title {
+    font-size: 48px;
+}
+
+.features img {
+    width: 100%;
+}
+
+.features .container section {
+    padding-bottom: 64px;
+}
+
+/* 疑似クラス */
+.features .container section:last-of-type {
+    padding-bottom: 16px;
+}
+
+.features p {
+    line-height: 1.8;
+}
+
+.previous-link {
+    text-align: center;
+}
+
+.previous-link a {
+    color: #707070;
+    font-size: 24px;
+}
+
+.previous-link-size {
+    font-size: 36px;
+}
+
+footer {
+    margin-top: 32px;
+    height: 48px;
+    background: #5a445a;
+    color: #fff;
+    text-align: center;
+    line-height: 48px;
+}
+
+@media (min-width:800px) {
+
+    .header-img img {
+        height: 315px;
+    }
+
+    .features {
+        width: 800px;
+        margin: 0 auto;
+    }
+
+    .features section {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .features .info-img {
+        width: 50%;
+        align-self: center;
+    }
+
+    .features .info-text {
+        width: calc(50% - 32px);
+    }
+
+    .features section:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+}

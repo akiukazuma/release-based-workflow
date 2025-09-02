@@ -1,0 +1,29 @@
+/* jqueryのようにid,classで適用する要素を指定します。 */
+.body {
+    /* 基本的なもの */
+
+    color: red;     /* 文字の色を指定 */
+    background-color: aqua;     /* 背景色を指定 */
+    margin: 10px 20px 0 10px;     /* 指定している順番はtop→right→bottom→left   こうするといちいちmargin-leftとかを書かずまとめてできる */
+    padding: 10px 20px 0 10px;
+
+
+            ----------------           /* marginとpaddingの違い */
+            |              |           /* margin ⇒ divの周りを覆っている */
+            |    -------   |           /* padding ⇒ marginの外側にある */
+            |    | div |   |
+            |    -------   |
+            |              |
+            ----------------
+
+    
+
+    
+}
+
+
+/* 階層を深くしていくことで、中にある細かい要素それぞれに適用させるようにできます。 */
+.body div {
+    /* classがbodyで、その中にあるdiv要素すべてに適用 */
+}
+
