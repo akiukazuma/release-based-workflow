@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>https/:sagisitec.om</title>
+        <link href="./css/style.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        <script src="js/sample1.js"></script>
+       
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script>
+            const countdown = ()=>{
+                const now = new Date(); //現在日時
+                const target = new Date('2023/9/31 23:59:59'); //対象日時
+                const differ = target.getTime() - now.getTime(); //残り日時
+            
+                const ms = Math.floor(differ); //ミリ秒
+                const sec = Math.floor(differ / 1000 % 60); //秒
+                const min = Math.floor(differ / 1000 / 60 % 60); //分
+                const hour = Math.floor(differ / 1000 / 60 / 60 % 24); //時
+                const day = Math.floor(differ / 1000 / 60 / 60 / 24); //日
+            
+                document.querySelector('.js-countdown-ms').textContent = String(ms).slice(-3, -1); //ミリ秒出力 末尾の2桁を表示する場合はslice(-2)に変更
+                document.querySelector('.js-countdown-sec').textContent = String(sec).padStart(2, '0'); //秒出力
+                document.querySelector('.js-countdown-min').textContent = String(min).padStart(2, '0'); //分出力
+                document.querySelector('.js-countdown-hour').textContent = String(hour).padStart(2, '0'); //時出力
+                document.querySelector('.js-countdown-day').textContent = String(day).padStart(2, '0'); //日出力
+            }
+            setInterval(countdown, 1);
+        </script>
+        <script>
+            $(function(){
+                /* Modal2へのボタン押下時のイベント */
+                $('#to-modal2').on('click', function() {
+                    changeModal('modal1', 'modal2');
+                });
+                /* モーダルの切り替え */
+                function changeModal(beforeModal, afterModal) {
+                    $('#'+beforeModal).modal( 'hide' );
+                    $('#'+afterModal).modal('show');
+                }
+            });
+            
+        </script>
+        <style></style>
+    </head>
+    <body>
+        <!-- Button trigger modal -->
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h4 class="card-title">ウイルスに感染しました！！</h4>
+              <p class="card-text">空き容量が足りません</p>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1">
+                    はい
+                </button>
+            </div>
+          </div>
+        <div class="modal fade" id="modal1" tabindex="-1"
+            role="dialog" aria-labelledby="label1" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="label1">ウイルスに感染しました</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        空き容量が足りません
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal2">はい</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal2" tabindex="-1"
+            role="dialog" aria-labelledby="label1" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="label1">ウ繧ｦルスに繝ｫ染しました</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        空き容榊ｮｹ驥足ｳ∪縺繧翫
+                    </div>
+                    <div class="modal-footer">
+                        <a href="1.html" class="btn btn-primary">わかりました</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

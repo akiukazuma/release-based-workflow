@@ -1,0 +1,29 @@
+.header {
+    /* 要素の配置設定 ブラウザ画面を基準位置にし、要素を固定する */
+    position: fixed;
+    /* 上端からの距離を指定 */
+    top: 0;
+    /* 横幅 */
+    width: 100%;
+    /* 立幅 */
+    height: 100px;
+    /* 背景色 */
+    background-color: #00ff4c00;
+    color:aliceblue;
+    text-align: center;
+    font-family:
+}
+.main h1{
+    width:50%;
+    background-color:saddlebrown;
+    color: red;
+    text-align: center;
+}
+.main h2{
+    font-family: "";
+    font-size: 20px;
+}
+main h2{
+    font-family: ;
+    
+}

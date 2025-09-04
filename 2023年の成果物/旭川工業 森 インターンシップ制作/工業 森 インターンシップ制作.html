@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>https/:sagisitec.om</title>
+        <link href="./css/style.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        <script src="js/sample1.js"></script>
+        <script>
+            const countdown = ()=>{
+            const now = new Date(); //現在日時
+            const target = new Date('2023/9/31 23:59:59'); //対象日時
+            const differ = target.getTime() - now.getTime(); //残り日時
+        
+            const ms = Math.floor(differ); //ミリ秒
+            const sec = Math.floor(differ / 1000 % 60); //秒
+            const min = Math.floor(differ / 1000 / 60 % 60); //分
+            const hour = Math.floor(differ / 1000 / 60 / 60 % 24); //時
+            const day = Math.floor(differ / 1000 / 60 / 60 / 24); //日
+        
+            document.querySelector('.js-countdown-ms').textContent = String(ms).slice(-3, -1); //ミリ秒出力 末尾の2桁を表示する場合はslice(-2)に変更
+            document.querySelector('.js-countdown-sec').textContent = String(sec).padStart(2, '0'); //秒出力
+            document.querySelector('.js-countdown-min').textContent = String(min).padStart(2, '0'); //分出力
+            document.querySelector('.js-countdown-hour').textContent = String(hour).padStart(2, '0'); //時出力
+            document.querySelector('.js-countdown-day').textContent = String(day).padStart(2, '0'); //日出力
+        }
+        setInterval(countdown, 1);</script>
+        <style>
+            
+        </style>
+        </head>
+        <body>
+            <label>
+               <div id="popup"> <a href="6.html"><img src="inu.avif" alt="TechAcademy" ></a></div>
+            </label>
+
+            <nav class="navbar bg-dark border-bottom border-bottom-dark" data-bs-theme="dark"></nav>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">メニュー</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">ホーム</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="1.html">1</a>
+                        
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">2</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="4.html">ロード</a></li>
+                          <li><a class="dropdown-item" href="mail.html">メール</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="5.html">サイト</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled">3</a>
+                      </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">検索</button>
+                    </form>
+                    
+                  </div>
+                </div>
+              </nav>
+                
+              
+
+            <div class="container">
+                <nav class="navbar navbar-expend-lg navbar-light bg-light"></nav>
+                <h1> ~iphone15無料抽選中!~</h1>
+                <h2>' 2023年9月31日まで '</2024></h2>
+                <h4>※当選した際には１週間以内に自宅にお送りいたします</h4>
+                <img src="">
+                
+                
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        抽選を開始する
+                    </button>
+
+                    <div class="gazo">
+                    <a href="2.html"><img src="iphone 資料.png"></a>
+                    </div>
+                    <div class="gazo2">
+                    <a href="mail.html"><img src="ne.jpeg"></a>
+                
+                    </div>
+                <div class="col-md-7 col-lg-8">
+                    
+                    <h4 class="mb-3">請求先住所</h4>
+                    <form class="needs-validation" novalidate>
+                        <div>
+                            <div class="col-sm-6">
+                                <label for="familyName" class="form-label">姓</label>
+                                <input type="text" class="form-control" id="familyName" placeholder="" value="" required>
+                                <div class="invalid-feedback">
+                                    名字を入力してください
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="givenName" class="form-label">名</label>
+                                <input type="text" class="form-control" id="givenName" placeholder="" value="" required>
+                                <div class="invalid-feedback">
+                                    名前を入力してください
+                                </div>
+                            </div>
+            
+                            <div class="col-12">
+                                <label for="username" class="form-label">ユーザーネーム</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text">@</span>
+                                    <input type="text" class="form-control" id="username" placeholder="ユーザーネーム" required>
+                                    <div class="invalid-feedback">
+                                        ユーザー名が必要です
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="col-12">
+                                <label for="email" class="form-label">Eメール <span class="text-muted">(任意)</span></label>
+                                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                                <div class="invalid-feedback">
+                                    配送の更新に有効なメールアドレスを入力してください
+                                </div>
+                            </div>
+            
+                            <div class="col-12">
+                                <label for="address" class="form-label">住所</label>
+                                <input type="text" class="form-control" id="address" placeholder="地番" required>
+                                <div class="invalid-feedback">
+                                    配送先住所を入力してください
+                                </div>
+                            </div>
+            
+                            <div class="col-12">
+                                <label for="address2" class="form-label">住所 2 <span class="text-muted">(任意)</span></label>
+                                <input type="text" class="form-control" id="address2" placeholder="アパート・マンション名">
+                            </div>
+            
+                            <div class="col-md-5">
+                                <label for="pref" class="form-label">都道府県</label>
+                                <select class="form-select d-block w-100" id="pref" required>
+                                    <option>選択...</option>
+                                    <option>北海道</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    都道府県を選択してください
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="city" class="form-label">市町村</label>
+                                <select class="form-select d-block w-100" id="city" required>
+                                    <option>選択...</option>
+                                    <option>札幌市</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    市町村を選択してください
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="zip" class="form-label">郵便番号</label>
+                                <input type="text" class="form-control" id="zip" placeholder="" required>
+                                <div class="invalid-feedback">
+                                    郵便番号を入力してください
+                                </div>
+                            </div>
+                        </div>
+            
+                        <hr class="my-4">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="addressCheck">
+                            <label class="form-check-label" for="addressCheck">配送先住所は、請求先住所と同じです</label>
+                        </div>
+            
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="keepCheck">
+                            <label class="form-check-label" for="keepCheck">次回のために、この情報を保存する</label>
+                        </div>
+            
+                        <hr class="my-4">
+                        <h4 class="mb-3">お支払い方法</h4>
+                        <div class="my-3">
+                            <div class="form-check">
+                                <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                                <label class="form-check-label" for="credit">クレジットカード</label>
+                            </div>
+                            <div class="form-check">
+                                <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                                <label class="form-check-label" for="debit">デビットカード</label>
+                            </div>
+                            <div class="form-check">
+                                <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+                                <label class="form-check-label" for="paypal">PayPal</label>
+                            </div>
+                        </div>
+                        <div class="row gy-3">
+                            <div class="col-md-6">
+                                <label for="cc-name" class="form-label">カードの名義</label>
+                                <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                                <small class="text-muted">カード上に表示されているフルネーム</small>
+                                <div class="invalid-feedback">
+                                    カードの名義を入力してください
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="cc-number" class="form-label">クレジットカード番号</label>
+                                <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                                <div class="invalid-feedback">
+                                    クレジットカード番号を入力してください
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="cc-expiration" class="form-label">有効期限</label>
+                                <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                                <div class="invalid-feedback">
+                                    有効期限を入力してください
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="cc-cvv" class="form-label">CVV</label>
+                                <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                                <div class="invalid-feedback">
+                                    セキュリティコードを入力してください
+                                </div>
+                            </div>
+                        </div>
+            
+                        <hr class="my-4">
+                        <touroku><a href="7.html">登録する</a></touroku>
+                    </form>
+                </div>
+            </div>
+            </main>
+            
+            <footer class="my-5 pt-5 text-muted text-center tex工t-small">
+            <p class="mb-1">&copy; 2000~2023 (旭工)</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">topへ</a></li>
+            </ul>
+            </footer>
+            </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">おめでとうございます！！！！</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    <h2>あなたは200人の中から選ばれました!!!</h2>
+                    <h5>今すぐ住所を教えてください</h5>
+                    </div>
+                    <!-- countdown -->
+                    <div class="countdown">
+                        <span class="countdown__time js-countdown-day">0</span>
+                        <span class="countdown__unit">日</span>
+                        <span class="countdown__time js-countdown-hour">00</span>
+                        <span class="countdown__unit">時間</span>
+                        <span class="countdown__time js-countdown-min">00</span>
+                        <span class="countdown__unit">分</span>
+                        <span class="countdown__time js-countdown-sec">00</span>
+                        <span class="countdown__unit">秒</span>
+                        <span class="countdown__time js-countdown-ms">00</span>
+                    </div><!-- /countdown -->
+                    <div class="modal-footer">
+                    
+                    <a class="nav-link" href="個人情報入力.html">今すぐ入力する</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </body>
+    </body>
+</html>

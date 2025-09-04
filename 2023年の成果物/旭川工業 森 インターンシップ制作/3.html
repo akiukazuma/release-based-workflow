@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>kaiintouroku.com</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        <script src="js/sample1.js"></script>
+        
+        <style>
+            body{
+                background-color: rgb(188, 188, 188);
+            }
+        </style>
+
+    </head>
+    <body>
+       <h1>会員登録ありがとうございます！</h1>        
+        <h3 class="mb-3">会員費請求</h3>
+        <form class="needs-validation" novalidate>
+            <div>
+                <div class="col-sm-6">
+                    <label for="familyName" class="form-label"><h3>姓</h3></label>
+                    <input type="text" class="form-control" id="familyName" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                        姓
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label for="givenName" class="form-label"><h3>名</h3></label>
+                    <input type="text" class="form-control" id="givenName" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                        名前
+                    </div>
+                </div>
+
+                <label for="givenName" class="form-label"><h3>電話番号</h3></label>
+                <input type="tel" name="telNumber" pattern="\d{1,5}-\d{1,4}-\d{4,5}">
+                <div class="invalid-feedback">
+                    0000-0000-0000
+                </div>
+
+            <hr class="my-4">
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="addressCheck">
+                <label class="form-check-label" for="addressCheck"><h3>必ず料金を支払うことを承諾する</h3>></label>
+            </div>
+
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="keepCheck">
+                <label class="form-check-label" for="keepCheck"><h3>前金を5万円払うことを了承する</h3></label>
+                
+            </div>
+            <hr class="my-4">
+            <h4 class="mb-3">支払い方法</h4>
+            <div class="my-3">
+                <div class="form-check">
+                    <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                    <label class="form-check-label" for="credit"><h3>クレジットカード</h3></label>
+                </div>
+                <div class="form-check">
+                    <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                    <label class="form-check-label" for="debit"><h3>デビットカード</h3></label>
+                </div>
+                <div class="form-check">
+                    <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+                    <label class="form-check-label" for="paypal"><h3>PayPal</h3></label>
+                </div>
+            </div>
+            <div class="row gy-3">
+                <div class="col-md-6">
+                    <label for="cc-name" class="form-label"><h3>カードの名義</h3></label>
+                    <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                    <small class="text-muted"><h3>カード上に表示されているフルネーム</h3></small>
+                    <div class="invalid-feedback">
+                        <h3>カードの名義を入力してください</h3>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="cc-number" class="form-label"><h3>クレジットカード番号</h3></label>
+                    <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                    <div class="invalid-feedback">
+                        <h3>クレジットカード番号を入力してください</h3>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label for="cc-expiration" class="form-label"><h3>有効期限</h3></label>
+                    <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                    <div class="invalid-feedback">
+                        <h3>有効期限を入力してください</h3>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label for="cc-cvv" class="form-label"><h3>CVV</h3></label>
+                    <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                    <div class="invalid-feedback">
+                        <h3>セキュリティコードを入力してください</h3>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4">
+            <a href="4.html" class="btn btn-primary">振り込む</a>
+        </form>
+    </div>
+</div>
+</main>
+</div>
+</div>
+</body>
+</html>  

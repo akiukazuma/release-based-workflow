@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    background: white;
+    font-size: 16px;
+}
+.header img{
+    width:100px;
+    padding-left:0%;
+}
+.header a{
+    color:blue;
+}
+.header form{
+    float:right;
+}
+.main h1{
+    text-align:center;
+    font-family:"HG正楷書体-PRO";
+    background-color: rgb(245, 255, 52);
+}
+.main h3{
+    font-size:30px;
+    font-family:"HG正楷書体-PRO";
+}
+.main p{
+    font-size:18px;
+    padding-left:1%;
+}
+.previous-link a{
+    color:blue;
+    float:right;
+}
+.footer h1{
+    margin-bottom:0;
+    font-size:40px;
+    font-family:"HGP行書体";
+    text-align:center;
+    background-color:violet;
+}
+

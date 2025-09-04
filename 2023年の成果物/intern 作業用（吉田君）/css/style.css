@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    background: white;
+    font-size: 16px;
+}
+.header img{
+    width:100px;
+    padding-left:0%;
+}
+.header a{
+    color:blue;
+}
+.header form{
+    float:right;
+}
+.main h1{
+    text-align: center;
+    font-family:"HG正楷書体-PRO";
+    background-color:aqua;
+}
+.main h2{
+    font-family:"HG正楷書体-PRO";
+}
+.main h3{
+    text-align:right;
+}
+.main img{
+    width:900px;
+    padding-left:25%;
+    
+}
+.main p{
+    font-family: "ＭＳ 明朝";
+    font-size:20px;
+    padding-left:5%;
+}
+.carousel-inner div{
+    width:1200px;
+    padding-left:10%;
+}
+.previous-link a{
+    color:blue;
+    float:right;
+}
+.footer h1{
+    margin-bottom:0;
+    font-size:40px;
+    font-family:"HGP行書体";
+    text-align:center;
+    background-color:violet;
+}
+

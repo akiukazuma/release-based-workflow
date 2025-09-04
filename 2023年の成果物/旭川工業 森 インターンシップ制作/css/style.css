@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    background-color: rgb(172, 208, 227) !important;
+    font-size: 16px;
+    font-family: 游明朝体, YuMincho, "游明朝 Medium", "Yu Mincho Medium", 游明朝, "Yu Mincho", serif;
+}
+.h{
+    color: red;
+}
+.container h1{ 
+    font-family:"ゴシックMB101 B";
+    color:deeppink;
+    font-size: 70px;
+    
+}
+.touroku{
+    font-size: 50px;
+}
+.gazo a{
+    animation: fadeIn 0.7s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+  }
+   
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .gazo2{
+    animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+   
+  @keyframes slideIn {
+    0% {
+      transform: translateX(180px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+    }
+    40%,100% {
+      opacity: 1;
+    }
+  }
+  #popup{
+    width:30%;
+    line-height:100px;
+    
+    padding:0 4%;
+    box-sizing:border-box;
+    display:none;
+    position:fixed;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  img{
+    width:100%;
+  }
+  label{
+    display:block;
+  }
+  /*ボタンの装飾*/
+  label span{
+    display:block;
+    background-color:#01b6ed;
+    color:#fff;
+    width:200px;
+    line-height:40px;
+    border-radius:4px;
+    text-align:center;
+  }
+  label span:hover{
+    cursor:pointer;
+  }
+  input[type="checkbox"]{
+    display:none;
+  }
+  
+ #popup{
+    display:block;
+  }
